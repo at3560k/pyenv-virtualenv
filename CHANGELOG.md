@@ -1,5 +1,15 @@
 ## Version History
 
+#### 1.1.3
+
+* No code changes since 1.1.2
+
+#### 1.1.2
+
+* Use custom get-pip URL based on the target version (#253, #254, #255)
+* Source conda 4.4.4 shell files (#251)
+* Evaluate force flag before testing if venv exists (#232)
+
 #### 1.1.1
 
 * Set `CONDA_PREFIX` to make is useable in conda activate/deactivate scripts (#224)

@@ -47,6 +47,7 @@ From inside that directory you can:
     ```
 
     **Zsh note**: Modify your `~/.zshenv` file instead of `~/.bash_profile`.
+    
     **Pyenv note**: You may also need to add `eval "$(pyenv init -)"` to your profile if you haven't done so already.
 
 3. **Restart your shell to enable pyenv-virtualenv**
@@ -227,7 +228,7 @@ You can set certain environment variables to control pyenv-virtualenv.
   `virtualenv`, download `get_pip.py` from the specified URL.
 * `PIP_VERSION`, if set and `venv` is preferred
   over `virtualenv`, install the specified version of pip.
-
+* `PYENV_VIRTUALENV_VERBOSE_ACTIVATE`, if set, shows some verbose outputs on activation and deactivation
 
 ## Version History
 
