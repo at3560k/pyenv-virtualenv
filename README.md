@@ -37,19 +37,17 @@ From inside that directory you can:
 2. (OPTIONAL) **Add `pyenv virtualenv-init` to your shell** to enable auto-activation of virtualenvs. This is entirely optional but pretty useful. See "Activate virtualenv" below.
 
     ```sh
-    $ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+    $ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
     ```
 
     **Fish shell note**:  Add this to your `~/.config/fish/config.fish`
 
     ```sh
-    status --is-interactive; and source (pyenv virtualenv-init -|psub)
+    status --is-interactive; and pyenv virtualenv-init - | source
     ```
 
-    **Zsh note**: Modify your `~/.zshenv` file instead of `~/.bash_profile`.
+    **Zsh note**: Modify your `~/.zshrc` file instead of `~/.bashrc`.
     
-    **Pyenv note**: You may also need to add `eval "$(pyenv init -)"` to your profile if you haven't done so already.
-
 3. **Restart your shell to enable pyenv-virtualenv**
 
     ```sh
@@ -57,10 +55,10 @@ From inside that directory you can:
     ```
 
 
-### Installing with Homebrew (for OS X users)
+### Installing with Homebrew (for macOS users)
 
-Mac OS X users can install pyenv-virtualenv with the
-[Homebrew](http://brew.sh) package manager.
+macOS users can install pyenv-virtualenv with the
+[Homebrew](https://brew.sh) package manager.
 This will give you access to the `pyenv-virtualenv` command. If you have pyenv
 installed, you will also be able to use the `pyenv virtualenv` command.
 
@@ -154,6 +152,12 @@ Removing the directories in `$(pyenv root)/versions` and `$(pyenv root)/versions
 pyenv uninstall my-virtual-env
 ```
 
+You can also delete existing virtualenvs by using `virtualenv-delete` command, e.g. you can run:
+```sh
+pyenv virtualenv-delete my-virtual-env
+```
+This will delete virtualenv called `my-virtual-env`.
+
 
 ### virtualenv and venv
 
@@ -237,7 +241,7 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ### License
 
-(The MIT License)
+[(The MIT License)](LICENSE)
 
 * Copyright (c) 2015 Yamashita, Yuu
 

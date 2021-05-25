@@ -1,5 +1,14 @@
 ## Version History
 
+#### 1.1.5
+
+* Fix install script (#290, #302)
+
+#### 1.1.4
+
+* Support newer conda (#290)
+* Prefer `python3.x` executable if avaialble (#206, #282, #296)
+
 #### 1.1.3
 
 * No code changes since 1.1.2
